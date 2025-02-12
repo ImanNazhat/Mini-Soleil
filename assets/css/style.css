@@ -16,14 +16,14 @@
 
   .links {
     display: flex;
-  
+    text-align:right;
 }
 
 .links ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-  text-align:center;
+    text-align:left;
   
   }
   
