@@ -2,7 +2,6 @@
 
 <main>
     <h2><?php echo $langs['about']; ?></h2>
-    <p>نحن فريق مبدع يقدم أفضل الحلول الرقمية لعملائنا.</p>
-</main>
+    <p><?php echo $langs['description']; ?></p></main>
 
 <?php include("../partials/footer.php"); ?>

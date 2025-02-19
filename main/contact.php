@@ -2,18 +2,8 @@
 
 <main>
     <h2><?php echo $langs['contact']; ?></h2>
-    <form>
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" required>
-        
-        <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" required>
-        
-        <label for="message">رسالتك:</label>
-        <textarea id="message" required></textarea>
-        
-        <button type="submit">إرسال</button>
-    </form>
+    <p><a href="https://form.jotform.com/240373720867359">Click here to visit the form</a></p>
+
 </main>
 
 <?php include("../partials/footer.php"); ?>
