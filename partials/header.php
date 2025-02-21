@@ -8,12 +8,13 @@
     <title><?php echo $langs['title']; ?></title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/normalize.css">
+    
    
 </head>
 <body>
 <header>
     <div>
-       
+        <button class="menu-burger">☰</button>
         <nav>
             <ul>
                 <li><a href="<?php echo BASE_URL; ?>/index.php"><?php echo $langs['home']; ?></a></li>
@@ -25,11 +26,13 @@
         <figure>
             <img src="<?php echo BASE_URL; ?>/src/img/logo-02.png" alt="logoMiniSoleil" class="logo">
         </figure>
-        
+
         <div class="language-switcher">
             <a href="?lang=ar">العربية</a> | 
             <a href="?lang=en">English</a>
         </div>
     </div>
 </header>
+
+
 

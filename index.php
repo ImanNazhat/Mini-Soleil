@@ -13,4 +13,6 @@
     <p><?php echo $langs['description']; ?></p>
 </main>
 
+
+
 <?php include("partials/footer.php"); ?>

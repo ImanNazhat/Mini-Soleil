@@ -12,8 +12,6 @@ $langs = [
 
      At Mini Soleil, we're not just making dreams happen – we're redefining the art of storytelling.<br/>
 
-
-
 OUR CONCEPT <br/>
 Elevating your collection with an exhilarating international touch and exceptional talents, unveiling the captivating beauty and intrinsic value of your creations. Exciting benefits for your brand :<br/>
 
