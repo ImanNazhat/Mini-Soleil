@@ -1,14 +1,14 @@
 <?php include("../partials/header.php"); ?>
 
-<main class=about>
-    <video controls >
-        <source src="/src/video/minisoleil.mov" type="video/webm" />
-        Votre navigateur ne supporte pas la lecture de vidéos.
-    </video>
+<main class="about">
+    
+    <img src="../src/img/IMG_9815.png" alt="MiniSoleil">  
 
-    <h2><?php echo $langs['about']; ?></h2>
-    <p><?php echo $langs['description']; ?></p></main>
+    <div class="text-content">
+        <h2><?php echo $langs['about.title']; ?></h2>
+        <p><?php echo $langs['about.description']; ?></p>
+    </div>
 
-    <script src="<?php echo BASE_URL . '/assets/js/script.js'; ?>"></script>
+</main>
  
 <?php include("../partials/footer.php"); ?>
