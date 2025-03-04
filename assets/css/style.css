@@ -12,6 +12,7 @@ header > div {
   width: 100%;
 }
 
+
 /* Le menu */
 nav {
   flex: 1;
@@ -37,6 +38,8 @@ nav a {
   color: #d77927;
   font-weight: bold;
   padding: 10px;
+  font-family: "Lustria", serif;
+  font-style: normal;
 }
 
 /* Style du logo */
@@ -73,6 +76,9 @@ figure {
 .language-switcher a {
   text-decoration: none;
   color: #d77927;
+  font-family: "Lustria", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Style des images */
@@ -103,7 +109,7 @@ figure {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1a4937;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -117,17 +123,23 @@ figure {
 
 /* Style de l'écriture */
 h2 {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 10px;
   text-align: center;
+  font-family: "Lustria", serif;
+  font-weight:bold;
+  font-style: normal;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
   text-align: center;
   padding: 20px;
+  font-family: "Lustria", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
@@ -137,7 +149,32 @@ main {
   padding-top: 50px;
 }
 
+.about {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  align-items: center; 
+  padding: 50px;
+  margin-bottom: 0; 
+} 
 
+
+.about img {
+  grid-column: 2 / 3;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.about .text-content h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.about .text-content {
+  grid-column: 3 / 6 ;
+  padding: 0; 
+  color:#174634
+}
+
+ 
 .contact {
   padding: 100px;
 }
@@ -147,25 +184,6 @@ main {
   color: #1a4937;
   font-weight: bold;
   padding: 10px;
-}
-
-.about {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  align-items: center; 
-  padding: 50px;
-  margin-bottom: 0; /* التأكد من أن ال footer لا يتأثر */
-}
-
-.about img {
-  grid-column: 2 / 3;
-  width: 300px;
-  height: auto; 
-}
-
-.about .text-content {
-  grid-column: 3 / 4;
-  padding: 0; 
 }
 
 
@@ -246,6 +264,21 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .about {
+    display: flex;
+    flex-direction: column; /* يجعل الصورة فوق النص */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%; /* جعل الصورة بعرض كامل */
+    max-width: 300px;
+  }
+
+  .about .text-content {
+    padding: 20px;
+  }
   .contact {
     padding: 50px;
   }
