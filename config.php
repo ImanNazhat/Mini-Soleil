@@ -1,21 +1,20 @@
 <?php
-session_start();
+session_start([
+    'use_strict_mode' => true,
+    'cookie_httponly' => true,
+    'cookie_secure' => isset($_SERVER['HTTPS']),
+    'cookie_samesite' => 'Strict'
+]);
 
 define('BASE_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__));
-
 
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = "en"; 
 }
 
-
-if (isset($_GET['lang'])) {
-    $lang = $_GET['lang'];
-    $_SESSION['lang'] = $lang;
-} else {
-    $lang = $_SESSION['lang'];
-}
-
+$allowedLangs = ['en', 'ar'];
+$lang = isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs) ? $_GET['lang'] : ($_SESSION['lang'] ?? 'en');
+$_SESSION['lang'] = $lang;
 
 $langFile = __DIR__ . "/lang/$lang.php";
 if (file_exists($langFile)) {
@@ -23,4 +22,3 @@ if (file_exists($langFile)) {
 } else {
     die("⚠ خطأ: ملف الترجمة غير موجود!");
 }
-?>

@@ -6,9 +6,8 @@
         Votre navigateur ne supporte pas la lecture de vidéos.
     </video>
 
-
-    <h2><?php echo $langs['contact']; ?></h2>
-    <p><a href="https://form.jotform.com/240373720867359">Click here to visit the form</a></p>
+    <h2><?php echo htmlspecialchars($langs['contact'], ENT_QUOTES, 'UTF-8'); ?></h2>
+    <p><a href="https://form.jotform.com/240373720867359"><?php echo htmlspecialchars($langs['contact_form'], ENT_QUOTES, 'UTF-8'); ?></a></p>
 
 </main>
 
