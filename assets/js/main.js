@@ -44,3 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".next").addEventListener("click", () => moveSlide(1));
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    let path = window.location.pathname; // Récupérer le chemin de l'URL
+
+    if (path.includes("contact")) {
+        window.history.pushState({}, "", "/contact");
+    } else if (path.includes("about")) {
+        window.history.pushState({}, "", "/about");
+    } else {
+        window.history.pushState({}, "", "/home");
+    }
+});

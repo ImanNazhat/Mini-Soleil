@@ -179,6 +179,14 @@ main {
   padding: 100px;
 }
 
+.contact video {
+  width: 100%;      
+  max-width:300px; 
+  height: auto;     
+  margin: 0 auto;
+  display: block;   
+}
+
 .contact a {
   text-decoration: none;
   color: #1a4937;
