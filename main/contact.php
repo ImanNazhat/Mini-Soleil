@@ -2,12 +2,11 @@
 
 <main class=contact>
     <video controls controlsList="nodownload">
-        <source src="..\src\video\minisoleilvideo.mov" type="video/webm" />
+    <source src="../src/video/0308.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la lecture de vidéos.
     </video>
 
-    <h2><?php echo htmlspecialchars($langs['contact'], ENT_QUOTES, 'UTF-8'); ?></h2>
-    <p><a href="https://form.jotform.com/240373720867359"><?php echo htmlspecialchars($langs['contact_form'], ENT_QUOTES, 'UTF-8'); ?></a></p>
+    <h2><a href="https://form.jotform.com/240373720867359"><?php echo htmlspecialchars($langs['contact_form'], ENT_QUOTES, 'UTF-8'); ?></a></h2>
 
 </main>
 

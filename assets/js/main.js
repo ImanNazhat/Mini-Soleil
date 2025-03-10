@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById('slider');
     const totalSlides = slides.length;
     const slidesPerView = 3; 
-    const step = 3; 
+    const step = 1; 
     const slideWidth = slides[0].offsetWidth + 20; 
 
     function moveSlide(direction) {

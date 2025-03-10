@@ -1,7 +1,11 @@
 /* --- Style CSS pour les grands écrans --- */
 header {
   background: #fff;
-  padding: 50px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 header > div {
@@ -11,7 +15,6 @@ header > div {
   position: relative;
   width: 100%;
 }
-
 
 /* Le menu */
 nav {
@@ -28,11 +31,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  margin: 0;
-}
-
-nav a {
+nav a, .language-switcher a {
   text-transform: uppercase;
   text-decoration: none;
   color: #d77927;
@@ -47,6 +46,7 @@ figure {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  margin: 0;
 }
 
 .logo {
@@ -73,14 +73,6 @@ figure {
   gap: 10px;
 }
 
-.language-switcher a {
-  text-decoration: none;
-  color: #d77927;
-  font-family: "Lustria", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Style des images */
 .slider-container {
   width: 100%;
@@ -88,10 +80,11 @@ figure {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 50px 0px;
 }
 
 .slider-wrapper {
-  width: 60%;
+  width: 60%; /* زيادة عرض السلايدر ليأخذ مساحة أكبر */
   overflow: hidden;
 }
 
@@ -101,7 +94,7 @@ figure {
 }
 
 .slide {
-  width: calc(100% / 3 - 20px); 
+  width: calc(100% / 3 - 20px);
   margin: 0 10px;
 }
 
@@ -120,43 +113,35 @@ figure {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-
-/* Style de l'écriture */
-h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
+/* Style général du texte */
+main, .about .text-content, .contact a {
   text-align: center;
   font-family: "Lustria", serif;
-  font-weight:bold;
-  font-style: normal;
 }
 
-p {
+main h2, .about .text-content h2 {
   font-size: 20px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  color:#d77927;
+  font-weight:bold;
   text-align: center;
-  padding: 20px;
-  font-family: "Lustria", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
-main {
-  font-size: 30px;
-  color: #1a4937;
+main p, .about .text-content {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: normal;
+  color:#d77927;
+  text-align: justify;
+  padding:0px 10px;
   text-align: center;
-  padding-top: 50px;
 }
 
 .about {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  align-items: center; 
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
   padding: 50px;
-  margin-bottom: 0; 
-} 
-
+}
 
 .about img {
   grid-column: 2 / 3;
@@ -164,154 +149,159 @@ main {
   border-radius: 10px;
 }
 
-.about .text-content h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
 .about .text-content {
-  grid-column: 3 / 6 ;
-  padding: 0; 
-  color:#174634
+  grid-column: 3 / 6;
+  padding: 0 20px;
+  font-size: 15px;
 }
 
- 
 .contact {
-  padding: 100px;
+  padding: 50px;
 }
 
 .contact video {
-  width: 100%;      
-  max-width:300px; 
-  height: auto;     
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   margin: 0 auto;
-  display: block;   
+  display: block;
 }
 
 .contact a {
-  text-decoration: none;
-  color: #1a4937;
-  font-weight: bold;
+  color: #d77927;
   padding: 10px;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 20px;
 }
-
 
 /* Footer */
 footer {
   background: #fff;
   padding: 50px;
   text-align: center;
-  color: #1a4937;
+  color: #d77927;
 }
 
-/* --- Style responsive pour les petits écrans (max-width: 1024px)--- */
+/* --- Style responsive pour les petits écrans --- */
 @media (max-width: 1024px) {
-  header {
-    padding: 30px;
-  }
-
-  .home__image {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .contact {
-    padding: 80px;
-  }
+  header { padding: 30px; }
+  .contact { padding: 80px; }
 }
-
-/* 📱 Pour les smartphones (max-width: 768px) */
 
 @media (max-width: 768px) {
+
   header {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px 0px;
+    position: relative;
   }
 
-  /* Icône du menu pour les petits écrans */
+  /* زر المينو برغر على اليسار */
   .menu-burger {
     display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #d77927;
-    padding: 10px;
+    position: relative;
+    order: -1; 
+    margin-left: 10px;
+    z-index: 1100;
   }
 
-  /* Cacher le menu */
+  /* جعل اللوغو في المنتصف باستخدام position absolute */
+  figure {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .logo {
+    width: 120px; /* تقليل الحجم قليلاً للموبايل */
+  }
+
   nav {
     display: none;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     text-align: center;
-    background: #fff;
-    position: absolute;
-    top: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
     left: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    text-align: center;
   }
 
-  /* Afficher le menu quand il est actif */
+  nav a {
+    font-size: 24px;
+    padding: 15px;
+  }
+
   nav.active {
     display: flex;
   }
 
-  figure {
-    position: relative;
-    left: auto;
-    transform: none;
-  }
-
-  .home__image {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .about {
     display: flex;
-    flex-direction: column; /* يجعل الصورة فوق النص */
+    flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .about img {
-    width: 100%; /* جعل الصورة بعرض كامل */
-    max-width: 300px;
+    width: 100%;
+    max-width: 150px;
   }
 
   .about .text-content {
-    padding: 20px;
+    padding: 0;
   }
-  .contact {
-    padding: 50px;
+
+  .contact { padding: 50px; }
+
+  /* تعديل حجم صور السلايدر مع الحفاظ على ثلاث صور في السلايدر */
+  .slider-container {
+    width: 100%; /* تأكد من أن الحاوية تكون واسعة */
+    padding: 40px 0; /* تقليل المسافة العلوية والسفلية لجعل الصور أكبر */
+  }
+
+  .slider-wrapper {
+    width: 80%; /* توسيع السلايدر ليشمل مساحة أكبر */
+  }
+
+  .slide {
+    width: calc(100% / 3 - 20px); /* ثلاث صور مع مساحة أكبر */
   }
 }
 
-/* Responsive pour les très petits écrans (max-width: 480px)  */
 @media (max-width: 480px) {
-  h2 {
-    font-size: 20px;
+  h2 { font-size: 20px; }
+  p { font-size: 16px; padding: 10px; }
+  .contact { padding: 30px; }
+  footer { padding: 20px; }
+
+  /* تعديل حجم صور السلايدر مع الحفاظ على ثلاث صور في السلايدر */
+  .slider-container {
+    width: 100%; /* تأكد من أن الحاوية تكون واسعة */
+    padding: 30px 0; /* تقليل المسافة العلوية والسفلية لجعل الصور أكبر */
   }
 
-  p {
-    font-size: 16px;
-    padding: 10px;
+  .slider-wrapper {
+    width: 90%; /* توسيع السلايدر ليشمل مساحة أكبر */
   }
 
-  .home__image {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .contact {
-    padding: 30px;
-  }
-
-  footer {
-    padding: 20px;
+  .slide {
+    width: calc(100% / 3 - 10px); /* ثلاث صور مع مساحة أكبر */
+    margin: 0 10px;
   }
 }
+

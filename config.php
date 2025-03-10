@@ -6,7 +6,7 @@ session_start([
     'cookie_samesite' => 'Strict'
 ]);
 
-define('BASE_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__));
+
 
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = "en"; 

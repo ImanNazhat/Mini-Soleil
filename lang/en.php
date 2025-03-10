@@ -5,7 +5,8 @@ $langs = [
     "about" => "About Us",
     "contact" => "Contact Us",
     "welcome" => "Mini Soleil Agency",
-    "description" => "Where creativity and elegance meet. We connect you with Europe’s finest talents to bring your vision to life, effortlessly and beautifully.",
+    "description" => "Where creativity and elegance meet. 
+     We connect you with Europe’s finest talents to bring your vision to life, effortlessly and beautifully.",
     "meta_description" => "Discover MiniSoleil, your go-to destination for...",
     "footer" => "All rights reserved to Mini Soleil &copy; " . date("2025"),
 
