@@ -6,19 +6,20 @@ session_start([
     'cookie_samesite' => 'Strict'
 ]);
 
+$allowedLangs = ['en', 'ar'];
 
-
-if (!isset($_SESSION['lang'])) {
-    $_SESSION['lang'] = "en"; 
+if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
+    $_SESSION['lang'] = $_GET['lang'];
+} elseif (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = 'en';
 }
 
-$allowedLangs = ['en', 'ar'];
-$lang = isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs) ? $_GET['lang'] : ($_SESSION['lang'] ?? 'en');
-$_SESSION['lang'] = $lang;
-
+$lang = $_SESSION['lang'];
 $langFile = __DIR__ . "/lang/$lang.php";
+
 if (file_exists($langFile)) {
     include $langFile;
 } else {
     die("⚠ خطأ: ملف الترجمة غير موجود!");
 }
+?>

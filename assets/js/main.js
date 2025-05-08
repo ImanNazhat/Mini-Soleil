@@ -17,41 +17,50 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("❌ error");
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
-    const slider = document.getElementById('slider');
-    const totalSlides = slides.length;
-    const slidesPerView = 3; 
-    const step = 1; 
-    const slideWidth = slides[0].offsetWidth + 20; 
 
-    function moveSlide(direction) {
-        index += direction * step;
+// const swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 3,
+//     spaceBetween: 20,
+//     loop: true,
+//     grabCursor: true,
+//     breakpoints: {
+//       480: { slidesPerView: 1 },
+//       768: { slidesPerView: 3 }
+//     }
+//   });
 
-        if (index < 0) {
-            index = 0;
-        } else if (index > totalSlides - slidesPerView) {
-            index = totalSlides - slidesPerView;
-        }
 
-        slider.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      grabCursor: true,
+      simulateTouch: true,
+      touchRatio: 1,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  
 
-    document.querySelector(".prev").addEventListener("click", () => moveSlide(-1));
-    document.querySelector(".next").addEventListener("click", () => moveSlide(1));
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    let path = window.location.pathname; // Récupérer le chemin de l'URL
+    let path = window.location.pathname;
 
     if (path.includes("contact")) {
-        window.history.pushState({}, "", "/contact");
+        console.log("You're on the contact page");
     } else if (path.includes("about")) {
-        window.history.pushState({}, "", "/about");
+        console.log("You're on the about page");
     } else {
-        window.history.pushState({}, "", "/home");
+        console.log("You're on the home page");
     }
 });

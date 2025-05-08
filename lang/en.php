@@ -2,10 +2,10 @@
 $langs = [
     "title" => "Bringing your ideas to life with our expert photography!",
     "home" => "Home",
-    "about" => "About Us",
+    "about" => "About Me",
     "contact" => "Contact Us",
     "welcome" => "Mini Soleil Agency",
-    "description" => "Where creativity and elegance meet. 
+    "description" => "Where creativity and elegance meet. <br>
      We connect you with Europe’s finest talents to bring your vision to life, effortlessly and beautifully.",
     "meta_description" => "Discover MiniSoleil, your go-to destination for...",
     "footer" => "All rights reserved to Mini Soleil &copy; " . date("2025"),

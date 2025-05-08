@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
     <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 <body>
 <header>
@@ -22,13 +23,13 @@
         <nav>
             <ul>
                 <li><a href="/index.php"><?php echo htmlspecialchars($langs['home'], ENT_QUOTES, 'UTF-8'); ?></a></li>
-                <li><a href="/main/about.php"><?php echo htmlspecialchars($langs['about'], ENT_QUOTES, 'UTF-8'); ?></a></li>
                 <li><a href="/main/contact.php"><?php echo htmlspecialchars($langs['contact'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+                <li><a href="/main/about.php"><?php echo htmlspecialchars($langs['about'], ENT_QUOTES, 'UTF-8'); ?></a></li>
             </ul>
         </nav>
 
         <figure>
-            <img src="/src/img/logo.png" alt="logoMiniSoleil" class="logo">
+            <img src="/src/img/Logo.png" alt="logoMiniSoleil" class="logo">
         </figure>
 
         <div class="language-switcher">
