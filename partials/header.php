@@ -22,9 +22,9 @@
         <button class="menu-burger">☰</button>
         <nav>
             <ul>
-                <li><a href="/index.php"><?php echo htmlspecialchars($langs['home'], ENT_QUOTES, 'UTF-8'); ?></a></li>
-                <li><a href="/main/contact.php"><?php echo htmlspecialchars($langs['contact'], ENT_QUOTES, 'UTF-8'); ?></a></li>
-                <li><a href="/main/about.php"><?php echo htmlspecialchars($langs['about'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+                <li><a href="/"><?php echo htmlspecialchars($langs['home'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+                <li><a href="/contact"><?php echo htmlspecialchars($langs['contact'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+                <li><a href="/about"><?php echo htmlspecialchars($langs['about'], ENT_QUOTES, 'UTF-8'); ?></a></li>
             </ul>
         </nav>
 
